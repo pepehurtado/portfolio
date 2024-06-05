@@ -1,47 +1,49 @@
-"use client";
-
 import Image from "next/image";
 import React from "react";
 import { CardBody, CardContainer, CardItem } from "./ui/3d-card";
+import SparklesPreview from "./SparklesPreview";
 
 export function ThreeDCardDemo() {
   return (
-    <CardContainer className="inter-var">
-  <CardBody className="bg-gray-850 dark:bg-black hover:bg-violet-950 dark:hover:bg-gray-900 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] border-black/[0.1] w-auto sm:w-[30rem] h-auto rounded-xl p-6 border">
-
-        <CardItem
-          translateZ="100"
-          rotateX={20}
-          rotateZ={-10}
-          className="w-full mt-4"
-        >
-          <Image
-            src="https://unavatar.io/pepehurtado"
-            height="1000"
-            width="1000"
-            className="h-200 w-full object-cover rounded-xl group-hover/card:shadow-xl"
-            alt="thumbnail"
-          />
-        </CardItem>
-        <div className="flex justify-center items-center mt-5">
+    <div className="mt-20">
+                <SparklesPreview 
+            texto="Pepe Hurtado"/>
+      <CardContainer className="inter-var">
+        <CardBody className="bg-gray-850 dark:bg-black hover:bg-violet-950 dark:hover:bg-gray-900 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] border-black/[0.1] w-72 sm:w-60 h-auto rounded-xl p-4 border">
           <CardItem
-            translateZ={20}
-            translateX={0}
-            as="button"
-            className="px-4 py-2 rounded-xl bg-white dark:bg-black dark:text-black text-black text-base font-bold"
+            translateZ="100"
+            rotateX={20}
+            rotateZ={-10}
+            className="w-full mt-2"
           >
-                          <a
-  href="https://github.com/pepehurtado"
-  target="_blank"
-  rel="noopener noreferrer"
-  
->
-  GitHub
-</a>
+            <Image
+              src="https://unavatar.io/pepehurtado"
+              height="1000"
+              width="1000"
+              className="h-320 w-full object-cover rounded-xl group-hover/card:shadow-xl -mt-20"
+              alt="thumbnail"
+            />
           </CardItem>
-        </div>
-      </CardBody>
-    </CardContainer>
+          <div className="flex justify-center items-center mt-3">
+            <CardItem
+              translateZ={20}
+              translateX={0}
+              as="button"
+              className="px-3 py-1 rounded-xl bg-white dark:bg-black dark:text-black text-black text-sm font-semibold"
+            >
+              <a
+                href="https://github.com/pepehurtado"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub
+              </a>
+            </CardItem>
+          </div>
+        </CardBody>
+      </CardContainer>
+    </div>
   );
 }
+
 export default ThreeDCardDemo;

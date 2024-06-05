@@ -28,7 +28,10 @@ export function HeroHighlightDemo() {
           Full-stack developer
         </Highlight>
         <p className="text-white text-sm md:text-2xl max-w-xl mt-6 text-center">
-              Me considero una persona con muchas ganas de aprender, mejorar y progresar como trabajador y persona. Destaca en mí la actitud que tengo frente a los problemas y adversidades.
+              Soy un recién graduado en Ingeniería Informática que busca aplicar sus conocimientos para ayudar y dar soluciones óptimas. 
+        </p>
+        <p className="text-white text-sm md:text-2xl max-w-xl mt-6 text-center">
+              Soy un cabezota cuando se trata de resolver problemas. No paro hasta encontrar la solución adecuada y hacer que las cosas funcionen.
         </p>
       </motion.h1>
     </HeroHighlight>

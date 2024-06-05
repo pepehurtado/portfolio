@@ -2,17 +2,19 @@
 import React from "react";
 import { SparklesCore } from "../components/ui/sparkles";
 
-export function SparklesPreview() {
+interface SparklesPreviewProps {
+  texto: string;
+}
+
+export function SparklesPreview({ texto }: SparklesPreviewProps) {
   return (
-    <div className="h-[15rem] md:h-[10rem] w-[15rem] md:w-[20rem] bg-transparent flex flex-col items-center overflow-hidden rounded-md mt-10">
-
-
-      <h1 className="md:text-5xl text-2xl lg:text-6xl font-bold text-center text-white relative z-20">
-        Pepe Hurtado
+    <div className="h-[15rem] md:h-[10rem] max-w-full w-[15rem] md:w-[30rem] bg-transparent flex flex-col items-center overflow-hidden rounded-md mt-10">
+      <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-center text-white relative z-20 whitespace-nowrap">
+        {texto}
       </h1>
       <div className="w-[20rem] h-20 relative">
         {/* Gradients */}
-        <div className="absolute inset-x-10 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[10px] w-4/4 blur-sm" />
+        <div className="absolute inset-x-10 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[10px] w-full blur-sm" />
         <div className="absolute inset-x-10 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
         <div className="absolute inset-x-30 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
 
