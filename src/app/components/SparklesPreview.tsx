@@ -8,30 +8,29 @@ interface SparklesPreviewProps {
 
 export function SparklesPreview({ texto }: SparklesPreviewProps) {
   return (
-    <div className="h-[15rem] md:h-[10rem] max-w-full w-[15rem] md:w-[30rem] bg-transparent flex flex-col items-center overflow-hidden rounded-md mt-10">
-      <h1 className="text-2xl md:text-5xl lg:text-6xl font-bold text-center text-white relative z-20 whitespace-nowrap">
+    <div className="relative h-[15rem] w-full flex flex-col items-center justify-center overflow-hidden rounded-md bg-transparent">
+      <h1 className="md:text-5xl text-3xl lg:text-5xl font-bold text-center text-white relative z-20">
         {texto}
       </h1>
-      <div className="w-[20rem] h-20 relative">
+      <div className="w-[40rem] h-600 relative">
         {/* Gradients */}
-        <div className="absolute inset-x-10 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[10px] w-full blur-sm" />
-        <div className="absolute inset-x-10 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
-        <div className="absolute inset-x-30 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
+        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-[2px] w-3/4 blur-sm" />
+        <div className="absolute inset-x-20 top-0 bg-gradient-to-r from-transparent via-indigo-500 to-transparent h-px w-3/4" />
+        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-[5px] w-1/4 blur-sm" />
+        <div className="absolute inset-x-60 top-0 bg-gradient-to-r from-transparent via-sky-500 to-transparent h-px w-1/4" />
 
         {/* Core component */}
         <SparklesCore
           background="transparent"
-          minSize={1}
-          maxSize={2}
-          particleDensity={1000}
+          minSize={0.4}
+          maxSize={1}
+          particleDensity={1200}
           className="w-full h-full"
           particleColor="#FFFFFF"
         />
-
-        {/* Radial Gradient to prevent sharp edges */}
-        <div className="absolute inset-0 w-full h-full bg-black [mask-image:radial-gradient(175px_100px_at_top,transparent_20%,white)]"></div>
       </div>
     </div>
   );
 }
+
 export default SparklesPreview;

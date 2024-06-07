@@ -52,13 +52,13 @@ export const SparklesCore = (props: ParticlesProps) => {
   };
 
   return (
-    <motion.div animate={controls} className={cn("opacity-0", className)}>
-      {init && (
-        <Particles
-          id={id || "tsparticles"}
-          className={cn("h-full w-full")}
-          particlesLoaded={particlesLoaded}
-          options={{
+    <motion.div animate={controls} className={cn("opacity-0", className)} style={{ width: "600px", height: "100%" }}>
+    {init && (
+      <Particles
+        id={id || "tsparticles"}
+        className={cn("h-full w-full")}
+        particlesLoaded={particlesLoaded}
+        options={{
             background: {
               color: {
                 value: background || "#0d47a1",
@@ -223,8 +223,8 @@ export const SparklesCore = (props: ParticlesProps) => {
               number: {
                 density: {
                   enable: true,
-                  width: 400,
-                  height: 400,
+                  width: 800,
+                  height: 800,
                 },
                 limit: {
                   mode: "delete",

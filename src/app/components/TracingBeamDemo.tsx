@@ -7,14 +7,16 @@ import MeteorsDemo from "../components/MeteorsDemo"; // Asegúrate de que la rut
 export function TracingBeamDemo() {
   return (
     <TracingBeam className="px-6">
-      <div className="max-w-2xl mx-auto antialiased pt-4 relative">
-        <h1>Desarrollador web SmartWay Studio</h1>
-        <h2 className="bg-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4">
-          Noviembre 2023-Febrero 2024
-        </h2>
+      <div className="max-w-6xl mx-auto antialiased pt-4 relative">
+<h1 className="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-left">
+    Desarrollador web SmartWay Studio
+  </h1>
+  <h2 className="bg-gradient-to-r from-gray-700 via-gray-800 to-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4 shadow-lg mt-2 ">
+    Noviembre 2023 - Febrero 2024
+  </h2>
         <div className="flex flex-wrap -mx-2">
           {dummyContent.map((item, index) => (
-            <div key={`content-${index}`} className="w-full md:w-1/2 lg:w-1/2 px-2 mb-4">
+            <div key={`content-${index}`} className="w-full md:w-1/2 lg:w-1/2 px-5 mb-5 ">
               <motion.h1
                 initial={{ opacity: 0, y: -50 }}
                 animate={{ opacity: 1, y: 0 }}

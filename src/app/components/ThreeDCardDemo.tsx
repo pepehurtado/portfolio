@@ -6,9 +6,9 @@ import SparklesPreview from "./SparklesPreview";
 export function ThreeDCardDemo() {
   return (
     <div className="mt-20">
-                <SparklesPreview 
+          <SparklesPreview 
             texto="Pepe Hurtado"/>
-      <CardContainer className="inter-var">
+      <CardContainer className="inter-var -mt-24">
         <CardBody className="bg-gray-850 dark:bg-black hover:bg-violet-950 dark:hover:bg-gray-900 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] border-black/[0.1] w-72 sm:w-60 h-auto rounded-xl p-4 border">
           <CardItem
             translateZ="100"
@@ -36,7 +36,12 @@ export function ThreeDCardDemo() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                GitHub
+                  <Image
+    src="/images/GITHUBLOGO.webp"
+    alt="GitHub Logo"
+    width={40}
+    height={40}
+  />
               </a>
             </CardItem>
           </div>

@@ -186,15 +186,12 @@ export const Vortex = (props: VortexProps) => {
     return x > canvas.width || x < 0 || y > canvas.height || y < 0;
   };
 
-  const resize = (
-    canvas: HTMLCanvasElement,
-    ctx?: CanvasRenderingContext2D
-  ) => {
+  const resize = (canvas: HTMLCanvasElement, ctx?: CanvasRenderingContext2D) => {
     const { innerWidth, innerHeight } = window;
-
+  
     canvas.width = innerWidth;
     canvas.height = innerHeight;
-
+  
     center[0] = 0.5 * canvas.width;
     center[1] = 0.5 * canvas.height;
   };
@@ -245,7 +242,11 @@ export const Vortex = (props: VortexProps) => {
         ref={containerRef}
         className="absolute h-full w-full inset-0 z-0 bg-transparent flex items-center justify-center"
       >
-        <canvas ref={canvasRef}></canvas>
+<canvas
+  ref={canvasRef}
+  className="fixed inset-0 z-0"
+  style={{ width: "100vw", height: "100vh" }}
+></canvas>
       </motion.div>
 
       <div className={cn("relative z-10", props.className)}>
