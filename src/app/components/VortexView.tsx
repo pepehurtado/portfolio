@@ -24,7 +24,7 @@ export function VortexDemoSecond() {
   };
 
   return (
-  <div className="min-h-screen items-center">
+    <div className="min-h-screen items-center scrollbar">
       <Vortex
         backgroundColor="black"
         rangeY={800}
@@ -34,50 +34,46 @@ export function VortexDemoSecond() {
       >
         <div className="flex flex-col md:flex-row items-center justify-center gap-4">
           <ThreeDCardDemo />
-         <div className="flex flex-col items-center md:items-center">
-           <HeroHighlightDemo />
-  
-  <div className="flex flex-row sm:flex-row items-center justify-center mx-auto gap-6 mt-6 sm:mt-8">
-    <button className="px-1 py-1 hover:bg-blue-300 transition duration-200 rounded-lg text-white shadow-md">
-      <a
-        href="https://www.linkedin.com/in/pepehurtado/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-          <Image
-    src="/images/LINKEDINLOGO.webp"
-    alt="LinkedIn Logo"
-    width={60}
-    height={60}
-  />
-      </a>
-    </button>
+          <div className="flex flex-col items-center md:items-center">
+            <HeroHighlightDemo />
 
-    {copied ?       
-  <Button
-    borderRadius="3rem"
-    className="bg-back dark:bg-slate-900 text-white dark:text-white border-neutral-200 dark:border-slate-800 hover:bg-[rgba(255,255,0,0.5)]  hover:text-slate-400 redtransition transform duration-300 ease-in-out"
-  >
-    Copiado!
-  </Button>
-  : 
-  <Button
-    borderRadius="3rem"
-    className="bg-back dark:bg-slate-900 text-white dark:text-white border-neutral-200 dark:border-slate-800 hover:bg-[rgba(255,255,0,0.5)] hover:text-black transition transform duration-300 ease-in-out hover:scale-105"
-    onClick={copyToClipboard}
-  >
-    Copiar correo
-  </Button>
-}
+            <div className="flex flex-row sm:flex-row items-center justify-center mx-auto gap-6 mt-6 sm:mt-8">
+              <button className="px-1 py-1 hover:bg-blue-300 transition duration-200 rounded-lg text-white shadow-md">
+                <a
+                  href="https://www.linkedin.com/in/pepehurtado/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Image
+                    src="/images/LINKEDINLOGO.webp"
+                    alt="LinkedIn Logo"
+                    width={60}
+                    height={60}
+                  />
+                </a>
+              </button>
 
-
-    
-  </div>
-</div>
-
+              {copied ? (
+                <Button
+                  borderRadius="3rem"
+                  className="bg-back dark:bg-slate-900 text-white dark:text-white border-neutral-200 dark:border-slate-800 hover:bg-[rgba(255,255,0,0.5)]  hover:text-slate-400 redtransition transform duration-300 ease-in-out"
+                >
+                  Copiado!
+                </Button>
+              ) : (
+                <Button
+                  borderRadius="3rem"
+                  className="bg-back dark:bg-slate-900 text-white dark:text-white border-neutral-200 dark:border-slate-800 hover:bg-[rgba(255,255,0,0.5)] hover:text-black transition transform duration-300 ease-in-out hover:scale-105"
+                  onClick={copyToClipboard}
+                >
+                  Copiar correo
+                </Button>
+              )}
+            </div>
+          </div>
         </div>
 
-        <EvervaultCardDemo/>
+        <EvervaultCardDemo />
 
         {/* Container for AnimatedPin components */}
         <div className="flex flex-col xl:flex-row justify-center items-center gap-44 mt-8">
@@ -103,7 +99,7 @@ export function VortexDemoSecond() {
       </Vortex>
 
       <div className="mt-12 md:mt-40 overflow-hidden">
-        <TracingBeamDemo/>
+        <TracingBeamDemo />
       </div>
     </div>
   );

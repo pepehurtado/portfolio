@@ -109,3 +109,24 @@ a {
     color-scheme: dark;
   }
 }
+
+/* Estilo para la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px; /* Ajusta la altura de la barra de desplazamiento */
+  border-radius: 14px; /* Añade bordes redondeados */
+  background-image: linear-gradient(to bottom, #000000, #49009c); /* Añade un gradiente de colores */
+  box-shadow: 2px 2px 6px rgba(255, 0, 0, 0.5); /* Añade sombra */
+  transition: background-color 0.9s; /* Agrega una transición para cambios suaves de color */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(102, 0, 143); /* Color de la barra de desplazamiento por defecto */
+  border-radius: 12px; /* Añade bordes redondeados */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgb(0, 90, 56); /* Color de la barra de desplazamiento al pasar el mouse sobre ella */
+}
+
+
