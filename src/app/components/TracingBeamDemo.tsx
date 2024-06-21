@@ -138,6 +138,30 @@ const aunnaContent = [
     badge: "Launch Week",
     image: "OPENAPI LOGO",
   },
+  {
+    title: "MariaDB",
+    description: [
+      "Uso y manejo de MariaDB para almacenar y modificar objetos",
+    ],
+    badge: "Launch Week",
+    image: "MARIADB LOGO",
+  },
+  {
+    title: "Git",
+    description: [
+      "Uso de Git para el control de versiones",
+    ],
+    badge: "Launch Week",
+    image: "GIT LOGO",
+  },
+  {
+    title: "GitHub",
+    description: [
+      "Uso de GitHub para el control de versiones y la colaboración en proyectos",
+    ],
+    badge: "Launch Week",
+    image: "GITHUBLOGO",
+  },
 ];
 
 export default TracingBeamDemo;
