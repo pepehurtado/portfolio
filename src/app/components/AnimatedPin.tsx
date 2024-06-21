@@ -41,7 +41,7 @@ export function AnimatedPin(props: CardProps) {
         className="block"
       >
         <PinContainer title={props.link} href={props.vinculo}>
-          <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[26rem] h-[24rem] lg:w-[32rem]">
+          <div className="flex flex-col p-4 tracking-tight text-slate-100/50 w-[20rem] h-[24rem] lg:w-[32rem]">
             <h3 className="font-bold text-base text-slate-100">
               {props.titulo}
             </h3>

@@ -38,20 +38,6 @@ export function VortexDemoSecond() {
             <HeroHighlightDemo />
 
             <div className="flex flex-row sm:flex-row items-center justify-center mx-auto gap-6 mt-6 sm:mt-8">
-              <button className="px-1 py-1 hover:bg-blue-300 transition duration-200 rounded-lg text-white shadow-md">
-                <a
-                  href="https://www.linkedin.com/in/pepehurtado/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Image
-                    src="/images/LINKEDINLOGO.webp"
-                    alt="LinkedIn Logo"
-                    width={60}
-                    height={60}
-                  />
-                </a>
-              </button>
 
               {copied ? (
                 <Button
