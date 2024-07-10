@@ -17,6 +17,8 @@ interface CardProps {
 const languageColors: { [key: string]: string } = {
   "VUE": "bg-green-800",
   "NET CORE": "bg-purple-800",
+  "ANGULAR": "bg-red-800",
+  "SPRING BOOT" : "bg-green-900"
 };
 
 export function AnimatedPin(props: CardProps) {
@@ -50,7 +52,8 @@ export function AnimatedPin(props: CardProps) {
             </div>
             <div className="flex flex-1 w-full rounded-lg mt-4 bg-gradient-to-br from-violet-500 via-purple-500 to-blue-500 relative">
               <Image
-                src={`/images/bytestormfront.webp`}
+//Ponemos en src  /images + la variable props.foto para que se muestre la imagen que le pasamos por props
+                src={`/images/${props.foto}.webp`}
                 alt="Descripción de la imagen"
                 layout="fill"
                 objectFit="cover"
