@@ -47,7 +47,7 @@ export function Button({
         <MovingBorder duration={duration} rx="30%" ry="30%">
           <div
             className={cn(
-              "h-10 w-10 opacity-[0.6] bg-[radial-gradient(var(--sky-500)_40%,transparent_60%)]",
+              "h-14 w-14 opacity-50 bg-[radial-gradient(#4b19fa_80%,transparent_60%)]",
               borderClassName
             )}
           />

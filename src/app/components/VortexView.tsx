@@ -55,7 +55,7 @@ export function VortexDemoSecond() {
             <div className="flex flex-row sm:flex-row items-center justify-center mx-auto gap-6 mt-6 sm:mt-8">
 <Button
       style={{ borderRadius: "3rem" }}
-      className="bg-back dark:bg-slate-900 text-white dark:text-white border-neutral-200 dark:border-slate-800 hover:bg-[rgba(255,255,0,0.5)] hover:text-black transition transform duration-300 ease-in-out hover:scale-105 flex items-center gap-2 px-4 py-2"
+      className="bg-back dark:bg-slate-900 text-white dark:text-white border-neutral-200 dark:border-slate-800 hover:bg-[rgba(75,25,250,0.5)] hover:transition transform duration-300 ease-in-out hover:scale-105 flex items-center gap-2 px-4 py-2"
       onClick={handleDownload}
     >
       <svg
@@ -80,7 +80,7 @@ export function VortexDemoSecond() {
               {copied ? (
                 <Button
                   borderRadius="3rem"
-                  className="bg-back dark:bg-slate-900 text-white dark:text-white border-neutral-200 dark:border-slate-800 hover:bg-[rgba(255,255,0,0.5)]  hover:text-slate-400 redtransition transform duration-300 ease-in-out"
+                  className="bg-back dark:bg-slate-900 text-white dark:text-white border-neutral-200 dark:border-slate-800 hover:bg-[rgba(75,25,250,0.5)]  hover:text-slate-400 redtransition transform duration-300 ease-in-out"
                 >
                   Copiado!
                 </Button>
@@ -88,7 +88,7 @@ export function VortexDemoSecond() {
                 
                 <Button
                   borderRadius="3rem"
-                  className="bg-back dark:bg-slate-900 text-white dark:text-white border-neutral-200 dark:border-slate-800 hover:bg-[rgba(255,255,0,0.5)] hover:text-black transition transform duration-300 ease-in-out hover:scale-105"
+                  className="bg-back dark:bg-slate-900 text-white dark:text-white border-neutral-200 dark:border-slate-800 hover:bg-[rgba(75,25,250,0.5)] hover:transition transform duration-300 ease-in-out hover:scale-105"
                   onClick={copyToClipboard}
                 >
                   Copiar correo
