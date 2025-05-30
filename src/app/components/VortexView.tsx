@@ -28,7 +28,7 @@ export function VortexDemoSecond() {
     const handleDownload = () => {
     setDescargando(true);
     const link = document.createElement("a");
-    link.href = "/cv.pdf"; // Ruta al archivo en public
+    link.href = "/Pepe_Hurtado_CV.pdf"; // Ruta al archivo en public
     link.download = "Pepe_Hurtado_CV.pdf";
     document.body.appendChild(link);
     link.click();
