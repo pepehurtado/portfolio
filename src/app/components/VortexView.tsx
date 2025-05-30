@@ -15,6 +15,8 @@ import { Button } from "../components/ui/moving-border";
 
 export function VortexDemoSecond() {
   const [copied, setCopied] = useState(false);
+  const [descargado, setDescargado] = useState(false);
+  const [descargando, setDescargando] = useState(false);
   const emailAddress = "pepeke2000@gmail.com";
 
   const copyToClipboard = () => {
@@ -23,6 +25,19 @@ export function VortexDemoSecond() {
     setTimeout(() => setCopied(false), 3000);
   };
 
+    const handleDownload = () => {
+    setDescargando(true);
+    const link = document.createElement("a");
+    link.href = "/cv.pdf"; // Ruta al archivo en public
+    link.download = "Pepe_Hurtado_CV.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    setDescargado(true);
+    setTimeout(() => setDescargado(false), 5000);
+  };
+  
+
   return (
     <div className="min-h-screen items-center scrollbar">
       <Vortex
@@ -30,7 +45,7 @@ export function VortexDemoSecond() {
         rangeY={800}
         particleCount={500}
         baseHue={120}
-        className="flex flex-col items-center justify-center px-2 md:px-6 py-4"
+        className="flex flex-col items-center justify-center px-2 md:px-6 py-4 mt:0 pt-0 md:pt-0"
       >
         <div className="flex flex-col md:flex-row items-center justify-center gap-4">
           <ThreeDCardDemo />
@@ -38,6 +53,30 @@ export function VortexDemoSecond() {
             <HeroHighlightDemo />
 
             <div className="flex flex-row sm:flex-row items-center justify-center mx-auto gap-6 mt-6 sm:mt-8">
+<Button
+      style={{ borderRadius: "3rem" }}
+      className="bg-back dark:bg-slate-900 text-white dark:text-white border-neutral-200 dark:border-slate-800 hover:bg-[rgba(255,255,0,0.5)] hover:text-black transition transform duration-300 ease-in-out hover:scale-105 flex items-center gap-2 px-4 py-2"
+      onClick={handleDownload}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-5 w-5"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        strokeWidth={2}
+        /* que solo se vea si no está descargando */
+        style={{ display: descargando ? "none" : "block" }
+        }
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"
+        />
+      </svg>
+      Descargar CV
+    </Button>
               {copied ? (
                 <Button
                   borderRadius="3rem"
@@ -46,6 +85,7 @@ export function VortexDemoSecond() {
                   Copiado!
                 </Button>
               ) : (
+                
                 <Button
                   borderRadius="3rem"
                   className="bg-back dark:bg-slate-900 text-white dark:text-white border-neutral-200 dark:border-slate-800 hover:bg-[rgba(255,255,0,0.5)] hover:text-black transition transform duration-300 ease-in-out hover:scale-105"
@@ -58,9 +98,13 @@ export function VortexDemoSecond() {
           </div>
         </div>
 
-        <EvervaultCardDemo />
+            <div className="mt-8 md:mt-0 overflow-hidden">
+        <TracingBeamDemo />
+      </div>
+{/*         <div className="mt-12 md:mt-40">
+          <SparklesPreview texto="Proyectos destacados" />
+        </div>
 
-        {/* Container for AnimatedPin components */}
         <div className="flex flex-wrap justify-center items-center gap-44 mt-8">
         <div className="w-full sm:w-1/2 lg:w-1/3">
             <AnimatedPin
@@ -109,12 +153,8 @@ export function VortexDemoSecond() {
               lenguaje={["NET CORE"]}
             />
           </div>
-        </div>
+        </div> */}
       </Vortex>
-
-      <div className="mt-12 md:mt-40 overflow-hidden">
-        <TracingBeamDemo />
-      </div>
     </div>
   );
 }

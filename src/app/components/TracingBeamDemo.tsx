@@ -6,14 +6,14 @@ import MeteorsDemo from "../components/MeteorsDemo"; // Asegúrate de que la rut
 
 export function TracingBeamDemo() {
   return (
-    <TracingBeam className="px-6">
+    <TracingBeam className="px-6" >
       <div className="max-w-6xl mx-auto antialiased pt-4 relative">
 
       <h1 className="text-4xl lg:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-500 to-red-500 text-left">
           Desarrollador web AUNNA IT
         </h1>
         <h2 className="bg-gradient-to-r from-gray-700 via-gray-800 to-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4 shadow-lg mt-2 mb-8 ">
-          Junio 2024 - Actualidad
+          Mayo 2024 - Actualidad
         </h2>
 
         <div className="flex flex-wrap -mx-2">
@@ -37,7 +37,7 @@ export function TracingBeamDemo() {
           Desarrollador web SmartWay Studio
         </h1>
         <h2 className="bg-gradient-to-r from-gray-700 via-gray-800 to-black text-white rounded-full text-sm w-fit px-4 py-1 mb-4 shadow-lg mt-2 mb-8">
-          Noviembre 2023 - Febrero 2024
+          Octubre 2023 - Febrero 2024
         </h2>
         <div className="flex flex-wrap -mx-2">
           {smartwayContent.map((item, index) => (
@@ -117,7 +117,7 @@ const aunnaContent = [
   {
     title: "Spring Boot",
     description: [
-      "Desarrollo de un proyecto dedicado a la música para la gestión de artistas, álbumes y canciones, con la posibilidad de filtrar por distintos parámetros y realizar búsquedas por nombre o género musical",
+      "Desarrollo e integro APIs REST robustas y escalables con Spring Boot. Tengo experiencia en seguridad con JWT, gestión de entidades con JPA/Hibernate, integración con servicios externos de cualquier tipo, pruebas unitarias, envío de correos, configuración avanzada y despliegue en entornos productivos manteniendo un backend limpio, mantenible y seguro."
     ],
     badge: "Launch Week",
     image: "SPRINGBOOT LOGO",
@@ -125,42 +125,57 @@ const aunnaContent = [
   {
     title: "Angular",
     description: [
-      "Desarrollo de un frontend para la gestión de la música, con la posibilidad de filtrar por distintos parámetros, realizar búsquedas por nombre o género musical y mostrar la información de los artistas, álbumes y canciones",
-    ],
+     "Encargado de la maquetación creando componentes reutilizables, servicios para integración con APIs REST, gestión reactiva con RxJS, formularios avanzados, gráficos con librerías como ApexCharts o amCharts, y soporte multilenguaje con ngx-translate. Tengo conocimientos en UX/UI adquiridos mediante formación, incluyendo diseño de wireframes y experiencia de usuario. También mantengo librerías y dependencias para garantizar estabilidad y rendimiento en producción."   ],
     badge: "Launch Week",
     image: "ANGULAR LOGO",
   },
   {
     title: "OpenAPI",
     description: [
-      "Uso de OpenAPI para la documentación de los endpoints y la generación de clientes para el consumo de los mismos",
+      "Documentación clara y actualizada de APIs, facilitando la comunicación entre frontend y backend. Tengo experiencia generando especificaciones automáticas con Springdoc en proyectos Spring Boot, personalizando los endpoints, y asegurando que la API esté bien documentada y accesible desde entornos de desarrollo y producción."
     ],
     badge: "Launch Week",
     image: "OPENAPI LOGO",
   },
   {
-    title: "MariaDB",
+    title: "Base de datos relacionales",
     description: [
-      "Uso y manejo de MariaDB para almacenar y modificar objetos",
+      "Experiencia en diseño y modelado con MariaDB/MySQL, manejo de entidades y relaciones con JPA/Hibernate, migraciones con scripts y mapeos, consultas personalizadas y optimización. También uso triggers y procedimientos almacenados para lógica avanzada."
     ],
     badge: "Launch Week",
-    image: "MARIADB LOGO",
+    image: "BBDD LOGO",
   },
   {
     title: "Git",
     description: [
-      "Uso de Git para el control de versiones",
+      "Control y gestión de ramas, flujos de trabajo y merges con buenas prácticas para mantener un código limpio y ordenado. Realizo integraciones continuas y despliegues controlados a entornos de preproducción y producción, asegurando estabilidad y trazabilidad en el desarrollo."
     ],
     badge: "Launch Week",
     image: "GIT LOGO",
   },
   {
-    title: "GitHub",
+    title: "GitLab",
     description: [
-      "Uso de GitHub para el control de versiones y la colaboración en proyectos",
+      "Manejo de repositorios, pipelines CI/CD y automatizar despliegues. Configuro integraciones y revisiones de código, facilitando flujos de trabajo ágiles y entregas continuas con control de calidad.",
     ],
     badge: "Launch Week",
-    image: "GITHUBLOGO",
+    image: "GITLAB LOGO",
+  },
+  {
+    title: "Python",
+    description: [
+      "Uso Python para crear scripts SQL que automatizan mapeos y realizo migraciones complejas de bases de datos, facilitando la transformación y mantenimiento eficiente de la información.",
+    ],
+    badge: "Launch Week",
+    image: "PYTHON LOGO",
+  },
+  {
+    title: "Seguridad",
+    description: [
+      "Tengo experiencia en integración y configuración de sistemas de autenticación y autorización usando OAuth para control de acceso seguro y tokens JWT, y LDAP para la gestión centralizada de usuarios y permisos en entornos empresariales."
+    ],
+    badge: "Launch Week",
+    image: "SEGURIDAD LOGO",
   },
 ];
 

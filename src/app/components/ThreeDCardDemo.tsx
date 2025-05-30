@@ -5,13 +5,13 @@ import SparklesPreview from "./SparklesPreview";
 
 export function ThreeDCardDemo() {
   return (
-    <div className="sm:mt-20">
+    <div className="sm:mt-10">
       <SparklesPreview texto="Pepe Hurtado" />
-      <CardContainer className="inter-var -mt-24">
+      <CardContainer className="inter-var -mt-32">
         <CardBody className="bg-gray-850 dark:bg-black hover:bg-violet-950 dark:hover:bg-gray-900 relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] border-black/[0.1] w-72 sm:w-80 h-auto rounded-xl p-4 border">
           <CardItem translateZ="100" rotateX={20} rotateZ={-10} className="w-full mt-2">
             <Image
-              src="https://unavatar.io/pepehurtado"
+              src="/images/imagenperfilpepe.webp"
               height="1000"
               width="1000"
               className="h-320 w-full object-cover rounded-xl group-hover/card:shadow-xl -mt-20"
@@ -19,7 +19,7 @@ export function ThreeDCardDemo() {
             />
           </CardItem>
           <div className="flex justify-center items-center mt-3 space-x-2">
-            <CardItem
+{/*             <CardItem
               translateZ={20}
               translateX={0}
               as="button"
@@ -37,7 +37,7 @@ export function ThreeDCardDemo() {
                   height={40}
                 />
               </a>
-            </CardItem>
+            </CardItem> */}
             <CardItem
               translateZ={20}
               translateX={0}
