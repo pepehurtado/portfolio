@@ -12,6 +12,7 @@ import { MacbookScroll } from "./ui/macbook-scroll";
 import TracingBeamDemo from "./TracingBeamDemo";
 import EvervaultCardDemo from "./EvervaultCard";
 import { Button } from "../components/ui/moving-border";
+import YouTubeVideo from "./YouTubeVideo";
 
 export function VortexDemoSecond() {
   const [copied, setCopied] = useState(false);
@@ -25,7 +26,7 @@ export function VortexDemoSecond() {
     setTimeout(() => setCopied(false), 3000);
   };
 
-    const handleDownload = () => {
+  const handleDownload = () => {
     setDescargando(true);
     const link = document.createElement("a");
     link.href = "/Pepe_Hurtado_CV.pdf"; // Ruta al archivo en public
@@ -36,7 +37,6 @@ export function VortexDemoSecond() {
     setDescargado(true);
     setTimeout(() => setDescargado(false), 5000);
   };
-  
 
   return (
     <div className="min-h-screen items-center scrollbar">
@@ -53,30 +53,31 @@ export function VortexDemoSecond() {
             <HeroHighlightDemo />
 
             <div className="flex flex-row sm:flex-row items-center justify-center mx-auto gap-6 mt-6 sm:mt-8">
-<Button
-      style={{ borderRadius: "3rem" }}
-      className="bg-back dark:bg-slate-900 text-white dark:text-white border-neutral-200 dark:border-slate-800 hover:bg-[rgba(75,25,250,0.5)] hover:transition transform duration-300 ease-in-out hover:scale-105 flex items-center gap-2 px-4 py-2"
-      onClick={handleDownload}
-    >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-        /* que solo se vea si no está descargando */
-        style={{ display: descargando ? "none" : "block" }
-        }
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"
-        />
-      </svg>
-      Descargar CV
-    </Button>
+              <Button
+                style={{ borderRadius: "3rem" }}
+                className="bg-back dark:bg-slate-900 text-white dark:text-white border-neutral-200 dark:border-slate-800 hover:bg-[rgba(75,25,250,0.5)] hover:transition transform duration-300 ease-in-out hover:scale-105 flex items-center gap-2 px-4 py-2"
+                onClick={handleDownload}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  /* que solo se vea si no está descargando */
+                  style={{
+                    display: descargando ? "none" : "block",
+                  }}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5m0 0l5-5m-5 5V4"
+                  />
+                </svg>
+                Descargar CV
+              </Button>
               {copied ? (
                 <Button
                   borderRadius="3rem"
@@ -85,7 +86,6 @@ export function VortexDemoSecond() {
                   Copiado!
                 </Button>
               ) : (
-                
                 <Button
                   borderRadius="3rem"
                   className="bg-back dark:bg-slate-900 text-white dark:text-white border-neutral-200 dark:border-slate-800 hover:bg-[rgba(75,25,250,0.5)] hover:transition transform duration-300 ease-in-out hover:scale-105"
@@ -97,11 +97,21 @@ export function VortexDemoSecond() {
             </div>
           </div>
         </div>
+                <div className="mt-12 md:mt-16 w-full max-w-6xl mx-auto px-4">
+          <YouTubeVideo 
+            videoId="LcY-xoM4IZA"
+            title="MusicStream - Aplicativo para artistas emergentes"
+            className="mb-8"
+          />
+        </div>
 
-            <div className="mt-8 md:mt-0 overflow-hidden">
-        <TracingBeamDemo />
-      </div>
-{/*         <div className="mt-12 md:mt-40">
+        <div className="mt-8 md:mt-0 overflow-hidden">
+          <TracingBeamDemo />
+        </div>
+
+        {/* YouTube Video Section */}
+
+        {/*         <div className="mt-12 md:mt-40">
           <SparklesPreview texto="Proyectos destacados" />
         </div>
 
