@@ -18,6 +18,8 @@ export function VortexDemoSecond() {
   const [copied, setCopied] = useState(false);
   const [descargado, setDescargado] = useState(false);
   const [descargando, setDescargando] = useState(false);
+  const [presentacionDescargada, setPresentacionDescargada] = useState(false);
+  const [presentacionDescargando, setPresentacionDescargando] = useState(false);
   const emailAddress = "pepeke2000@gmail.com";
 
   const copyToClipboard = () => {
@@ -26,16 +28,66 @@ export function VortexDemoSecond() {
     setTimeout(() => setCopied(false), 3000);
   };
 
-  const handleDownload = () => {
+  const handleDownload = async () => {
     setDescargando(true);
-    const link = document.createElement("a");
-    link.href = "/Pepe_Hurtado_CV.pdf"; // Ruta al archivo en public
-    link.download = "Pepe_Hurtado_CV.pdf";
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    setDescargado(true);
-    setTimeout(() => setDescargado(false), 5000);
+    
+    try {
+      // Verificar que el archivo existe
+      const response = await fetch("/Pepe_Hurtado_CV.pdf");
+      if (!response.ok) {
+        throw new Error("Archivo no encontrado");
+      }
+      
+      // Crear y ejecutar la descarga
+      const link = document.createElement("a");
+      link.href = "/Pepe_Hurtado_CV.pdf";
+      link.download = "Pepe_Hurtado_CV.pdf";
+      link.target = "_blank"; // Abrir en nueva pestaña como respaldo
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      setDescargado(true);
+      setTimeout(() => {
+        setDescargado(false);
+        setDescargando(false);
+      }, 5000);
+    } catch (error) {
+      console.error("Error al descargar el CV:", error);
+      alert("Error al descargar el CV. Por favor, inténtalo de nuevo.");
+      setDescargando(false);
+    }
+  };
+
+  const handlePresentacionDownload = async () => {
+    setPresentacionDescargando(true);
+    
+    try {
+      // Verificar que el archivo existe
+      const response = await fetch("/Presentacion_TFG_Pepe_Hurtado.pdf");
+      if (!response.ok) {
+        throw new Error("Archivo no encontrado");
+      }
+      
+      // Crear y ejecutar la descarga
+      const link = document.createElement("a");
+      link.href = "/Presentacion_TFG_Pepe_Hurtado.pdf";
+      link.download = "Presentacion_TFG_Pepe_Hurtado.pdf";
+      link.target = "_blank"; // Abrir en nueva pestaña como respaldo
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+      
+      setPresentacionDescargada(true);
+      setTimeout(() => {
+        setPresentacionDescargada(false);
+        setPresentacionDescargando(false);
+      }, 5000);
+    } catch (error) {
+      console.error("Error al descargar la presentación:", error);
+      alert("Error al descargar la presentación. Por favor, inténtalo de nuevo.");
+      setPresentacionDescargando(false);
+    }
   };
 
   return (
@@ -52,7 +104,7 @@ export function VortexDemoSecond() {
           <div className="flex flex-col items-center md:items-center">
             <HeroHighlightDemo />
 
-            <div className="flex flex-row sm:flex-row items-center justify-center mx-auto gap-6 mt-6 sm:mt-8">
+            <div className="flex flex-col sm:flex-row items-center justify-center mx-auto gap-6 mt-6 sm:mt-8">
               <Button
                 style={{ borderRadius: "3rem" }}
                 className="bg-back dark:bg-slate-900 text-white dark:text-white border-neutral-200 dark:border-slate-800 hover:bg-[rgba(75,25,250,0.5)] hover:transition transform duration-300 ease-in-out hover:scale-105 flex items-center gap-2 px-4 py-2"
@@ -65,7 +117,6 @@ export function VortexDemoSecond() {
                   viewBox="0 0 24 24"
                   stroke="currentColor"
                   strokeWidth={2}
-                  /* que solo se vea si no está descargando */
                   style={{
                     display: descargando ? "none" : "block",
                   }}
@@ -78,6 +129,32 @@ export function VortexDemoSecond() {
                 </svg>
                 Descargar CV
               </Button>
+
+              <Button
+                style={{ borderRadius: "3rem" }}
+                className="bg-back dark:bg-slate-900 text-white dark:text-white border-neutral-200 dark:border-slate-800 hover:bg-[rgba(120,25,250,0.5)] hover:transition transform duration-300 ease-in-out hover:scale-105 flex items-center gap-2 px-4 py-2"
+                onClick={handlePresentacionDownload}
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  style={{
+                    display: presentacionDescargando ? "none" : "block",
+                  }}
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m3 0H4a1 1 0 00-1 1v14a1 1 0 001 1h16a1 1 0 001-1V5a1 1 0 00-1-1zM9 9h6m-6 4h6m-6 4h4"
+                  />
+                </svg>
+                Descargar Presentación TFG
+              </Button>
+
               {copied ? (
                 <Button
                   borderRadius="3rem"
