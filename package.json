@@ -1,7 +1,11 @@
 {
-  "name": "my-project",
-  "version": "0.1.0",
-  "private": true,
+  "name": "pepe-hurtado-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio personal de Pepe Hurtado - Desarrollador Full Stack",
+  "author": "Pepe Hurtado",
+  "keywords": ["portfolio", "developer", "full-stack", "react", "next.js", "spring-boot", "angular"],
+  "homepage": "https://pepehurtado.vercel.app",
+  "private": false,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
