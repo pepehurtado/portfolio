@@ -7,20 +7,11 @@ const nextConfig = {
     compress: true,
     poweredByHeader: false,
     generateEtags: true,
-    // Configuración para sitemap y robots
-/*     async rewrites() {
-      return [
-        {
-          source: '/sitemap.xml',
-          destination: '/api/sitemap',
-        },
-      ];
-    }, */
     // Headers para SEO y seguridad
     async headers() {
       return [
         {
-          source: '/sitemap.xml',
+          source: '/sitemap-pepe.xml',
           headers: [
             {
               key: 'Content-Type',
