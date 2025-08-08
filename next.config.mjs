@@ -8,14 +8,14 @@ const nextConfig = {
     poweredByHeader: false,
     generateEtags: true,
     // Configuración para sitemap y robots
-    async rewrites() {
+/*     async rewrites() {
       return [
         {
           source: '/sitemap.xml',
           destination: '/api/sitemap',
         },
       ];
-    },
+    }, */
     // Headers para SEO y seguridad
     async headers() {
       return [
