@@ -11,7 +11,7 @@ const nextConfig = {
     async headers() {
       return [
         {
-          source: '/sitemap-pepe.xml',
+          source: '/sitemap.xml',
           headers: [
             {
               key: 'Content-Type',
