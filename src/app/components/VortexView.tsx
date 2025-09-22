@@ -13,6 +13,7 @@ import TracingBeamDemo from "./TracingBeamDemo";
 import EvervaultCardDemo from "./EvervaultCard";
 import { Button } from "../components/ui/moving-border";
 import YouTubeVideo from "./YouTubeVideo";
+import ProjectsSection from "./ProjectsSection";
 
 export function VortexDemoSecond() {
   const [copied, setCopied] = useState(false);
@@ -152,7 +153,7 @@ export function VortexDemoSecond() {
                     d="M7 4V2a1 1 0 011-1h8a1 1 0 011 1v2m3 0H4a1 1 0 00-1 1v14a1 1 0 001 1h16a1 1 0 001-1V5a1 1 0 00-1-1zM9 9h6m-6 4h6m-6 4h4"
                   />
                 </svg>
-                Descargar Presentación TFG
+                Documentación MusicStream
               </Button>
 
               {copied ? (
@@ -180,6 +181,11 @@ export function VortexDemoSecond() {
             title="MusicStream - Aplicativo para artistas emergentes"
             className="mb-8"
           />
+        </div>
+
+        {/* Projects Section */}
+        <div >
+          <ProjectsSection />
         </div>
 
         <div className="mt-8 md:mt-0 overflow-hidden">
