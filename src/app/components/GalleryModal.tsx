@@ -71,14 +71,8 @@ export function GalleryModal({ isOpen, onClose, projectTitle, images }: GalleryM
               {/* Título compacto */}
               <div>
                 <h2 className="text-xl md:text-2xl font-bold bg-gradient-to-r from-white via-purple-200 to-blue-200 bg-clip-text text-transparent leading-tight">
-                  {projectTitle}
+                  {projectTitle} <span className="text-white/70 text-xs md:text-sm">({images.length} {images.length === 1 ? 'imagen' : 'imágenes'})</span>
                 </h2>
-                <div className="flex items-center gap-2 mt-1">
-                  <div className="w-1 h-1 bg-purple-400 rounded-full animate-pulse" />
-                  <span className="text-white/70 text-xs md:text-sm">
-                    {images.length} {images.length === 1 ? 'imagen' : 'imágenes'}
-                  </span>
-                </div>
               </div>
             </div>
             

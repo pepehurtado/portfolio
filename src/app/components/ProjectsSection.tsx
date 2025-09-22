@@ -26,46 +26,45 @@ const projects: Project[] = [
     technologies: ["A medida", "Blog", "Google Maps"],
     category: "Sitio Web Profesional",
     gallery: [
-      { title: "Página Principal", src: "/images/imagenperfilpepe.webp", hoverText: "Diseño elegante y profesional con llamadas a la acción claras" },
-      { title: "Sobre Mí", src: "/images/ANGULAR.webp", hoverText: "Sección personal que conecta con los clientes potenciales" },
-      { title: "Servicios", src: "/images/VUE.webp", hoverText: "Detalle completo de todos los servicios psicológicos ofrecidos" },
-      { title: "Contacto", src: "/images/SPRING BOOT.webp", hoverText: "Integración con WhatsApp y formulario de contacto funcional" },
-      { title: "Blog", src: "/images/NET CORE.webp", hoverText: "Sistema de blog para compartir artículos y recursos" },
-      { title: "Responsive Design", src: "/images/PYTHON LOGO.webp", hoverText: "Adaptación perfecta a dispositivos móviles y tablets" }
+      { title: "Página Principal", src: "/images/andrea-psicologia.webp", hoverText: "Diseño elegante y profesional con llamadas a la acción claras" },
+      { title: "Sobre Mí", src: "/images/andrea-sobremi.webp", hoverText: "Sección personal que conecta con los clientes potenciales" },
+      { title: "Servicios", src: "/images/andrea-servicios.webp", hoverText: "Presentación clara y organizada de servicios psicológicos con un diseño limpio y enfocado en la confianza." },
+      { title: "Preguntas frecuentes", src: "/images/andrea-preguntas.webp", hoverText: "Sistema de blog para compartir artículos y recursos" },
+      { title: "Contacto", src: "/images/andrea-contacto.webp", hoverText: "Integración con WhatsApp funcional" },
+      { title: "Diseño adaptado", src: "/images/andrea-adaptado.webp", hoverText: "Adaptación perfecta a dispositivos móviles y tablets" }
     ]
   },
   {
     id: 2,
     title: "Tu Posible Web - Restaurante",
     description: "Plataforma web para gestión de restaurantes con sistema de reservas, menús digitales y gestión de reseñas de clientes.",
-    image: "/images/tuposibleweb.webp", // Temporal placeholder
+    image: "/images/posible-inicio.webp", // Temporal placeholder
     url: "https://tuposibleweb.vercel.app/restaurante/Tu-Bar/Calle-de-ejemplo/965-125-467/ChIJG3WZi-QXYg0R4Y1tbG-onuM/4.2/856",
     technologies: ["A medida", "Menús digitales", "Gestión de reseñas"],
     category: "Plataforma Web",
     gallery: [
-      { title: "Dashboard Principal", src: "/images/musicstream.webp", hoverText: "Panel de control intuitivo para gestión completa del restaurante" },
-      { title: "Menú Digital", src: "/images/GIFSAPP.webp", hoverText: "Menús interactivos con imágenes y descripciones detalladas" },
-      { title: "Sistema de Reservas", src: "/images/bytestormfront.webp", hoverText: "Calendario inteligente para gestionar reservas en tiempo real" },
-      { title: "Gestión de Reseñas", src: "/images/ANGULAR LOGO.webp", hoverText: "Herramientas para monitorear y responder reseñas de clientes" },
-      { title: "Panel Administrativo", src: "/images/SPRINGBOOT LOGO.webp", hoverText: "Backend robusto para administración y análisis de datos" },
-      { title: "Vista Móvil", src: "/images/DATABASE LOGO.webp", hoverText: "Experiencia optimizada para dispositivos móviles" }
+      { title: "Dashboard Principal", src: "/images/posible-inicio.webp", hoverText: "Diseño inmersivo y atractivo se combina con una interfaz limpia y moderna para ofrecer una experiencia de usuario fluida" },
+      { title: "Paleta de color personalizable", src: "/images/posible-paleta.webp", hoverText: "Personalización completa de la paleta de colores para adaptarse a la identidad de la marca" },
+      { title: "Menú Digital", src: "/images/posible-menu.webp", hoverText: "Menús interactivos con imágenes, descripciones detalladas y navegación del menú fluida e intuitiva con acceso directo a cada categoría" },
+      { title: "Ubicación", src: "/images/posible-ubicacion.webp", hoverText: "Contacto y ubicación del restaurante en un mapa interactivo" },
+      { title: "Vista Móvil", src: "/images/posible-adaptado.webp", hoverText: "Experiencia optimizada para dispositivos móviles" }
     ]
   },
   {
     id: 3,
     title: "Car Detailing Premium",
     description: "Sitio web elegante para servicios de detailing automotriz. Incluye galería de trabajos (antes/después), servicios premium y sistema de citas online.",
-    image: "/images/car-detailing.webp", // Temporal placeholder
+    image: "/images/car-inicio.webp", // Temporal placeholder
     url: "https://car-detailing-chi.vercel.app/",
     technologies: ["A medida", "Antes/Después", "Vídeos integrados"],
     category: "Sitio Web Comercial",
     gallery: [
-      { title: "Página de Inicio", src: "/images/DJANGO LOGO.webp", hoverText: "Landing page impactante con galería de trabajos destacados" },
-      { title: "Galería Antes/Después", src: "/images/JWT LOGO.webp", hoverText: "Comparaciones visuales que demuestran la calidad del servicio" },
-      { title: "Servicios Premium", src: "/images/MARIADB LOGO.webp", hoverText: "Catálogo detallado de servicios de detailing automotriz" },
-      { title: "Sistema de Citas", src: "/images/OPENAPI LOGO.webp", hoverText: "Reserva online con calendario disponible y confirmación automática" },
-      { title: "Videos Integrados", src: "/images/SEGURIDAD LOGO.webp", hoverText: "Videos promocionales y tutoriales integrados en la experiencia" },
-      { title: "Diseño Responsivo", src: "/images/GIT LOGO.webp", hoverText: "Interfaz que se adapta perfectamente a cualquier dispositivo" }
+      { title: "Página de Inicio", src: "/images/car-inicio.webp", hoverText: "Página de inicio para un servicio de detallado de coches con un diseño de lujo, llamativo y directo, enfocado en la conversión del cliente" },
+      { title: "Galería Antes/Después", src: "/images/car-comparar.webp", hoverText: "Sección de resultados 'Antes y Después' que muestra la calidad del trabajo de forma visual y atractiva mediante un slider interactivo y claro" },
+      { title: "Servicios Premium", src: "/images/car-servicios.webp", hoverText: "Sección de servicios con un diseño elegante de modo oscuro, que organiza la información en tarjetas claras y concisas para una fácil comprensión y selección" },
+      { title: "Contacto", src: "/images/car-formulario.webp", hoverText: "Sección de contacto y reserva con un formulario de presupuesto claro y accesible, diseñado para maximizar la conversión de clientes" },
+      { title: "Diseño Responsivo", src: "/images/car-adaptado.webp", hoverText: "Interfaz que se adapta perfectamente a cualquier dispositivo" },
+      { title: "Términos y chat", src: "/images/car-terminos.webp", hoverText: "Sección de términos y condiciones para acceder al chat" }
     ]
   }
 ];
@@ -119,29 +118,95 @@ export function ProjectsSection() {
                   openGallery(project);
                 }}
               >
-                <Image
-                  src={project.image}
-                  height="1000"
-                  width="1000"
-                  className="h-48 md:h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl group-hover/card:scale-110 transition-all duration-500"
-                  alt={project.title}
-                />
-                {/* Overlay para indicar que es clickeable */}
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-all duration-300 rounded-xl flex items-center justify-center">
-                  <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 rounded-full p-3">
-                    <svg 
-                      className="w-6 h-6 text-gray-800" 
-                      fill="none" 
-                      stroke="currentColor" 
-                      viewBox="0 0 24 24"
-                    >
-                      <path 
-                        strokeLinecap="round" 
-                        strokeLinejoin="round" 
-                        strokeWidth={2} 
-                        d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" 
-                      />
-                    </svg>
+                {/* Contenedor principal para la imagen con efectos */}
+                <div className="relative rounded-xl overflow-hidden">
+                  {/* Borde animado visible */}
+                  <div className="absolute -inset-[3px] bg-gradient-to-r from-purple-500 via-blue-500 via-cyan-400 via-purple-500 to-blue-500 rounded-xl animate-spin-slow opacity-90"></div>
+                  
+                  {/* Efectos de brillo adicionales */}
+                  <div className="absolute -inset-[2px] bg-gradient-to-r from-transparent via-purple-400 to-transparent rounded-xl animate-pulse"></div>
+                  <div className="absolute -inset-[2px] bg-gradient-to-l from-transparent via-blue-400 to-transparent rounded-xl animate-pulse delay-700"></div>
+                  
+                  {/* Contenedor de la imagen */}
+                  <div className="relative rounded-xl overflow-hidden bg-gray-900">
+                    <Image
+                      src={project.image}
+                      height="1000"
+                      width="1000"
+                      className="h-48 md:h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl group-hover:scale-105 transition-all duration-500 relative z-10"
+                      alt={project.title}
+                    />
+                    
+                    {/* Badge permanente en la esquina superior derecha */}
+                    <div className="absolute top-2 right-2 z-20">
+                      <div className="bg-gradient-to-r from-purple-600/90 to-blue-600/90 backdrop-blur-sm rounded-full px-2 py-1 border border-white/20 shadow-lg">
+                        <div className="flex items-center gap-1">
+                          <svg 
+                            className="w-3 h-3 text-white" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                          >
+                            <path 
+                              strokeLinecap="round" 
+                              strokeLinejoin="round" 
+                              strokeWidth={2} 
+                              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" 
+                            />
+                          </svg>
+                          <span className="text-white text-xs font-medium">Galería</span>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Badge en la esquina inferior izquierda */}
+                    <div className="absolute bottom-2 left-2 z-20">
+                      <div className="bg-black/70 backdrop-blur-sm rounded-lg px-2 py-1 border border-white/20">
+                        <span className="text-white text-xs font-medium">📸 {project.gallery.length} imágenes</span>
+                      </div>
+                    </div>
+                    
+                    {/* Overlay mejorado para hover */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20 opacity-0 group-hover:opacity-100 transition-all duration-300 rounded-xl flex items-center justify-center z-10">
+                      <div className="text-center text-white transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+                        <div className="bg-white/20 backdrop-blur-sm rounded-full p-4 mb-3 mx-auto w-fit border border-white/30">
+                          <svg 
+                            className="w-8 h-8 text-white animate-pulse" 
+                            fill="none" 
+                            stroke="currentColor" 
+                            viewBox="0 0 24 24"
+                          >
+                            <path 
+                              strokeLinecap="round" 
+                              strokeLinejoin="round" 
+                              strokeWidth={2} 
+                              d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" 
+                            />
+                          </svg>
+                        </div>
+                        <p className="text-sm font-semibold mb-1">Ver Galería</p>
+                        <p className="text-xs opacity-90">{project.gallery.length} capturas disponibles</p>
+                      </div>
+                    </div>
+
+                    {/* Indicador de clic siempre visible */}
+                    <div className="absolute top-2 left-2 z-20">
+                      <div className="bg-green-500/90 backdrop-blur-sm rounded-full p-1.5 border border-white/30 shadow-lg animate-pulse">
+                        <svg 
+                          className="w-3 h-3 text-white" 
+                          fill="none" 
+                          stroke="currentColor" 
+                          viewBox="0 0 24 24"
+                        >
+                          <path 
+                            strokeLinecap="round" 
+                            strokeLinejoin="round" 
+                            strokeWidth={2} 
+                            d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" 
+                          />
+                        </svg>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </CardItem>
