@@ -14,6 +14,19 @@ import EvervaultCardDemo from "./EvervaultCard";
 import { Button } from "../components/ui/moving-border";
 import YouTubeVideo from "./YouTubeVideo";
 import ProjectsSection from "./ProjectsSection";
+import { FloatingDock } from "./ui/floating-dock";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconMail,
+  IconHome,
+  IconUser,
+  IconBriefcase,
+  IconDownload,
+  IconFileDescription,
+  IconCode,
+  IconStar,
+} from "@tabler/icons-react";
 
 export function VortexDemoSecond() {
   const [copied, setCopied] = useState(false);
@@ -22,6 +35,51 @@ export function VortexDemoSecond() {
   const [presentacionDescargada, setPresentacionDescargada] = useState(false);
   const [presentacionDescargando, setPresentacionDescargando] = useState(false);
   const emailAddress = "pepeke2000@gmail.com";
+
+  const links = [
+    {
+      title: "Sobre Mí",
+      icon: (
+        <IconUser className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#about",
+    },
+    {
+      title: "Mis Proyectos",
+      icon: (
+        <IconCode className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#proyectos",
+    },
+    {
+      title: "Experiencia",
+      icon: (
+        <IconBriefcase className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "#experiencia",
+    },
+    {
+      title: "GitHub",
+      icon: (
+        <IconBrandGithub className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://github.com/pepehurtado",
+    },
+    {
+      title: "LinkedIn",
+      icon: (
+        <IconBrandLinkedin className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://www.linkedin.com/in/pepehurtado",
+    },
+    {
+      title: "CV",
+      icon: (
+        <IconDownload className="h-full w-full text-neutral-500 dark:text-neutral-300" />
+      ),
+      href: "https://pepehurtado.vercel.app/Pepe_Hurtado_CV.pdf",
+    },
+  ];
 
   const copyToClipboard = () => {
     navigator.clipboard.writeText(emailAddress);
@@ -100,7 +158,7 @@ export function VortexDemoSecond() {
         baseHue={120}
         className="flex flex-col items-center justify-center px-2 md:px-6 py-4 mt:0 pt-0 md:pt-0"
       >
-        <div className="flex flex-col md:flex-row items-center justify-center gap-4">
+        <div id="about" className="flex flex-col md:flex-row items-center justify-center gap-4">
           <ThreeDCardDemo />
           <div className="flex flex-col items-center md:items-center">
             <HeroHighlightDemo />
@@ -184,11 +242,11 @@ export function VortexDemoSecond() {
         </div>
 
         {/* Projects Section */}
-        <div >
+        <div id="proyectos">
           <ProjectsSection />
         </div>
 
-        <div className="mt-8 md:mt-0 overflow-hidden">
+        <div id="experiencia" className="mt-8 md:mt-0 overflow-hidden">
           <TracingBeamDemo />
         </div>
 
@@ -248,6 +306,15 @@ export function VortexDemoSecond() {
           </div>
         </div> */}
       </Vortex>
+      
+      {/* Floating Dock */}
+      <div className="fixed bottom-4 md:bottom-10 left-1/2 transform -translate-x-1/2 z-50 px-4">
+        <FloatingDock
+          items={links}
+          desktopClassName="bg-black/20 backdrop-blur-md border border-white/10 scale-90 md:scale-100"
+          mobileClassName="bg-black/20 backdrop-blur-md border border-white/10"
+        />
+      </div>
     </div>
   );
 }
